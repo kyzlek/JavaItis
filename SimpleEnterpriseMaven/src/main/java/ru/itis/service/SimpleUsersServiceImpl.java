@@ -17,6 +17,7 @@ public class SimpleUsersServiceImpl implements SimpleUsersService {
     }
 
     public boolean isRegistered(String userName, String userPassword) {
+
         List<User> registeredUsers = usersDao.getAll();
 
         for (User user : registeredUsers) {
@@ -28,4 +29,5 @@ public class SimpleUsersServiceImpl implements SimpleUsersService {
 
         return false;
     }
+
 }
